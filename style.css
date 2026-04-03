@@ -1,0 +1,53 @@
+:root {
+--bg: #0f172a;
+--panel: #111827;
+--bezel: #1f2937;
+--btn: #374151;
+--btn-hover: #4b5563;
+--accent: #0ea5e9;
+--text: #e5e7eb;
+--muted: #9ca3af;
+--danger: #ef4444;
+--shadow: 0 20px 40px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.03);
+--radius: 22px;
+}
+*{box-sizing: border-box}
+html,body{height:100%}
+body{
+background-image: url(/image/ChatGPT\ Image\ Aug\ 30\,\ 2025\,\ 12_20_29\ AM.png);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+margin:0;
+display:grid;
+place-items:center;
+
+font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+color:var(--text);
+}
+.calculator{
+width:468px; height:640px;
+background:linear-gradient(180deg,var(--panel),#0b1220);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+border:1px solid rgba(255,255,255,.06);
+display:grid;
+grid-template-rows:22px 1fr 420px;
+overflow:hidden;
+}
+.chrome{display:flex;align-items:center;gap:8px;padding:8px 12px;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));border-bottom:1px solid rgba(255,255,255,.06)}
+.dot{width:10px;height:10px;border-radius:50%;background:#ef4444;box-shadow:inset 0 1px 0 rgba(255,255,255,.35)}
+.dot:nth-child(2){background:#f59e0b}
+.dot:nth-child(3){background:#22c55e}
+.display{display:grid;grid-template-rows:1fr auto;padding:18px 22px 10px 22px;background:radial-gradient(600px 280px at 80% 20%, rgba(14,165,233,.12), transparent 55%), radial-gradient(800px 360px at 10% 0%, rgba(245,158,11,.12), transparent 60%)}
+.history{min-height:24px;color:var(--muted);word-wrap:break-word;opacity:.9;font-size:14px;text-align:right}
+.output{font-size:44px;font-variant-numeric:tabular-nums;text-align:right;letter-spacing:1px;line-height:1.2;padding-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.keys{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));padding:16px;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:12px}
+button.key{border:none;border-radius:16px;background:linear-gradient(180deg,var(--bezel),#111827);box-shadow:var(--shadow);color:var(--text);font-size:20px;padding:12px;cursor:pointer;transition:transform .06s ease,filter .06s ease,background .2s ease;user-select:none}
+button.key:active{transform:translateY(1px) scale(.995);filter:brightness(.95)}
+.op{background:linear-gradient(180deg,#0b3650,#0a2740)}
+.fn{background:linear-gradient(180deg,#3b2e07,#241b05)}
+.danger{background:linear-gradient(180deg,#3a0d0d,#240808)}
+.span-2{grid-column:span 2}
+button.key:focus{outline:2px solid var(--accent);outline-offset:2px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
